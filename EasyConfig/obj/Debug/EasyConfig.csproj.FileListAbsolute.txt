@@ -1,0 +1,6 @@
+D:\Project\EasyConfigRepository\EasyConfig\bin\EasyConfig.dll.config
+D:\Project\EasyConfigRepository\EasyConfig\bin\EasyConfig.dll
+D:\Project\EasyConfigRepository\EasyConfig\bin\EasyConfig.pdb
+D:\Project\EasyConfigRepository\EasyConfig\obj\Debug\EasyConfig.csprojResolveAssemblyReference.cache
+D:\Project\EasyConfigRepository\EasyConfig\obj\Debug\EasyConfig.dll
+D:\Project\EasyConfigRepository\EasyConfig\obj\Debug\EasyConfig.pdb
