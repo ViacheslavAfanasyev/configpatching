@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>ftp://52.184.153.235</_PublishTargetUrl>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAOgWp/aybVUK1BUd6bcfRiQAAAAACAAAAAAAQZgAAAAEAACAAAABjc0Wus7GHfWItAD8ghHJQJ1Y69v2ipqrZzPnch0j2kAAAAAAOgAAAAAIAACAAAAAfJILnuWKlDyyU0ogWPAh1bn3MW0UXydv3xpuNaSbdIyAAAAAGcpfjJTpwc1qCPk4FjPkULl5eOm5DDw1JILRfmAph4kAAAAA/3Iy419Cg4PIFVWiUtE9c7QbPNMbvsF2AzYPNxrNJpzU2cMrRh6zmD55M3H9k7zpQhrCi0emHbpVrGvxyOkXX</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/EasyConfig.dll">
+      <publishTime>02/05/2017 19:52:24</publishTime>
+    </File>
+    <File Include="sitecore/admin/config.aspx">
+      <publishTime>02/05/2017 19:46:22</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

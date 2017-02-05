@@ -1,23 +1,45 @@
-﻿using Sitecore.sitecore.admin;
+﻿using Sitecore.Configuration;
+using Sitecore.sitecore.admin;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Xml;
+using Sitecore.Support.sitecore.admin;
+using System.Xml.XPath;
 
 namespace EasyConfig.sitecore.admin
 {
     public partial class Config : AdminPage
     {
+        //public static string PatchNmsp = "http://www.sitecore.net/xmlconfig/";
+        //public static string SetNmsp = "http://www.sitecore.net/xmlconfig/set/";
+        private static XmlDocument InitialXmlConfiguration;
+        private static XmlDocument ResultXmlConfiguration = new XmlDocument();
+        //private XmlDocument ResultXmlConfigurationPreviousStep;
+        //private const string XmlNs = "http://www.sitecore.net/xmlconfig/";
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!Page.IsPostBack)
-            {
-                base.CheckSecurity();
-                //this.InitializeInitialRequestData();
-                //this.PopulateFormControlsWithInitialValues();
-            }
+            base.CheckSecurity();
+            //LoadShowConfig();
+            
+            XmlDocument configuration = Factory.GetConfiguration();
+            showconfig.Text = configuration.Render();
+
+            //configControl.InnerText = configuration.Render();
+            //configControl.InnerText = configuration.InnerXml;
+
+            //base.Response.ContentType = "text/xml";
+            //base.Response.Write(configuration.OuterXml);
+
+            //if (!Page.IsPostBack)
+            //{
+            //    base.CheckSecurity();
+            //    //this.InitializeInitialRequestData();
+            //    //this.PopulateFormControlsWithInitialValues();
+            //}
             //this.LoadShowConfig();
             //this.LoadResultConfig();
         }
@@ -396,25 +418,25 @@ namespace EasyConfig.sitecore.admin
             if (nodeToPatchControl.Attributes["onkeyup"] == null)
                 nodeToPatchControl.Attributes.Add("onkeyup", "return nodeToPatchControlTextChanged();");
         }
+        */
+        //protected virtual void LoadShowConfig()
+        //{
+        //    InitialXmlConfiguration = Factory.GetConfiguration();
+        //    XPathNavigator xPathNavigator = InitialXmlConfiguration.CreateNavigator();
+        //    var commentsNavigator = xPathNavigator.SelectDescendants(XPathNodeType.Comment, false);
+        //    while (commentsNavigator.MoveNext())
+        //    {
+        //        commentsNavigator.Current.DeleteSelf();
+        //    }
+        //    this.xmlOriginalControl.XPathNavigator = xPathNavigator;
+        //}
 
-        protected virtual void LoadShowConfig()
-        {
-            InitialXmlConfiguration = Factory.GetConfiguration();
-            XPathNavigator xPathNavigator = InitialXmlConfiguration.CreateNavigator();
-            var commentsNavigator = xPathNavigator.SelectDescendants(XPathNodeType.Comment, false);
-            while (commentsNavigator.MoveNext())
-            {
-                commentsNavigator.Current.DeleteSelf();
-            }
-            this.xmlOriginalControl.XPathNavigator = xPathNavigator;
-        }
-
-        protected virtual void LoadResultConfig()
-        {
-            XPathNavigator xPathNavigator = ResultXmlConfiguration.CreateNavigator();
-            this.xmlPatchedControl.XPathNavigator = xPathNavigator;
-        }
-
+        //protected virtual void LoadResultConfig()
+        //{
+        //    XPathNavigator xPathNavigator = ResultXmlConfiguration.CreateNavigator();
+        //    this.xmlPatchedControl.XPathNavigator = xPathNavigator;
+        //}
+        /*
         private bool ValidateFormData(ref string message)
         {
             if (string.IsNullOrEmpty(this.nodeToPatchControl.Text))
