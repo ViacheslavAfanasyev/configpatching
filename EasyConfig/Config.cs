@@ -14,7 +14,7 @@ namespace Sitecore.Support.sitecore.admin
 
         //public static string PatchNmsp = "http://www.sitecore.net/xmlconfig/";
         //public static string SetNmsp = "http://www.sitecore.net/xmlconfig/set/";
-        //private static XmlDocument InitialXmlConfiguration;
+        private static XmlDocument InitialXmlConfiguration;
         //private static XmlDocument ResultXmlConfiguration = new XmlDocument();
         //private XmlDocument ResultXmlConfigurationPreviousStep;
         //private const string XmlNs = "http://www.sitecore.net/xmlconfig/";
@@ -24,9 +24,9 @@ namespace Sitecore.Support.sitecore.admin
         public static string Render(this XmlDocument xmlDoc)
         {
             string result = string.Empty;
-            //var configuration = Factory.GetConfiguration();
+            var configuration = Factory.GetConfiguration();
             //HttpUtility.HtmlEncode()
-            
+
 
             //Remove comments
             //XPathNavigator xPathNavigator = xmlDoc.CreateNavigator();
@@ -35,9 +35,9 @@ namespace Sitecore.Support.sitecore.admin
             //{
             //    commentsNavigator.Current.DeleteSelf();
             //}
-            //------------------
+            ////------------------
 
-            result = String.Format("<pre>{0}</pre>", HttpUtility.HtmlEncode(xmlDoc.InnerXml));
+            //result = String.Format("<pre>{0}</pre>", HttpUtility.HtmlEncode(xmlDoc.InnerXml));
 
             //foreach (XmlNode node in xmlDoc.ChildNodes)
             //{

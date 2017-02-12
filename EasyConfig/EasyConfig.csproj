@@ -186,6 +186,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="sitecore\admin\ConfigPatcher.xslt" />
     <None Include="Properties\PublishProfiles\FTP.pubxml" />
     <None Include="scripts\ai.0.15.0-build58334.js" />
     <None Include="scripts\ai.0.15.0-build58334.min.js" />

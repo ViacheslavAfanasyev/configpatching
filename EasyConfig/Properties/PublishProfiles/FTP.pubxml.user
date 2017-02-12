@@ -11,10 +11,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/EasyConfig.dll">
-      <publishTime>02/05/2017 19:52:24</publishTime>
+      <publishTime>02/12/2017 18:49:02</publishTime>
     </File>
     <File Include="sitecore/admin/config.aspx">
-      <publishTime>02/05/2017 19:46:22</publishTime>
+      <publishTime>02/12/2017 19:11:37</publishTime>
+    </File>
+    <File Include="sitecore/admin/ConfigPatcher.xslt">
+      <publishTime>06/22/2016 13:07:02</publishTime>
     </File>
   </ItemGroup>
 </Project>
